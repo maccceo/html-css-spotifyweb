@@ -3,3 +3,53 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
+body {
+	color: darkgrey;
+	font-family: Gotham, Arial, sans-serif;
+}
+
+.flex-row-center {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.player__icon {
+	height: 1.2rem;
+}
+
+#player {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 90px;
+	background-color: #2C2C2C;
+	padding: 12px;
+}
+
+#player__ls>div {
+	display: inline-block;
+}
+
+/*lo metto anche al div perchè sennò per qualche motivo viene 4px più grande*/
+#player__ls__albumcover,
+#player__ls__albumcover>img {
+	height: 55px;
+}
+
+#player__ls__songID {
+	margin: 0 15px;
+}
+
+#player__ls__songID__title {
+	text-transform: uppercase;
+	color: #FFF;
+	font-size: 0.9rem;
+	margin-bottom: 0.12rem;
+}
+
+#player__ls__songID__artist {
+	font-size: 0.8rem;
+}
