@@ -9,12 +9,65 @@ body {
 	font-family: Gotham, Arial, sans-serif;
 }
 
+#main-container {
+	width: 100vw;
+	height: 100vh;
+}
+
+#row-one {
+	width: 100%;
+	height: calc(100% - 90px);
+}
+
+#row-two {
+	width: 100%;
+	height: 90px;
+}
+
 .flex-row-center {
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
 	align-items: center;
 }
+
+
+
+
+
+/*-----------------------------*/
+/*# # # LEFTNAV CON MENU' # # #*/
+/*-----------------------------*/
+#leftnav {
+	width: 250px;
+	height: 100%;
+	float: left;
+	background-color: #08080A;
+	padding: 12px;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+
+}
+
+.leftnav__icon {
+	height: 1.2rem;
+}
+
+
+
+
+
+/*------------------------*/
+/*# # # MAIN SECTION # # #*/
+/*------------------------*/
+#main {
+	width: calc(100% - 250px);
+	height: 100%;
+	float: left;
+	overflow: auto;
+}
+
 
 
 
@@ -142,15 +195,4 @@ body {
 
 #player__rs .player__icon {
 	margin: 0 5px;
-}
-
-
-
-
-
-/*-----------------------------*/
-/*# # # LEFTNAV CON MENU' # # #*/
-/*-----------------------------*/
-.leftnav__icon {
-	height: 1.2rem;
 }
