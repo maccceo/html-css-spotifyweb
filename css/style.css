@@ -43,15 +43,43 @@ body {
 	height: 100%;
 	float: left;
 	background-color: #08080A;
-	padding: 12px;
+	padding: 15px;
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: space-between;
 
 }
 
+#leftnav__top-elements>* {
+	margin-bottom: 20px;
+}
+
+#leftnav__bottom-elements {
+
+}
+
+#leftnav__logo>img {
+	width: 70%;
+}
+
+.leftnav__category {
+	margin-bottom: 10px;
+	font-weight: 600;
+	border-left: 5px solid #00D764;
+}
+
+.leftnav__category p {
+	display: inline-block;
+	margin-left: 10px;
+}
+
+#leftnav__recentlyplayed {
+
+}
+
 .leftnav__icon {
 	height: 1.2rem;
+
 }
 
 
