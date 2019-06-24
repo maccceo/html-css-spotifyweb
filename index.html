@@ -174,23 +174,24 @@
 			<div id="player__cs__buttons">
 				<img class="player__icon" src="Resources/icons/shuffle.png">
 				<img class="player__icon" src="Resources/icons/previous.png">
-				<img class="player__icon" id="player__icon__play-button" src="Resources/icons/play.png">
+				<img class="player__icon" src="Resources/icons/play.png">
+				<span id="player__icon__play-button"></span>
 				<img class="player__icon" src="Resources/icons/next.png">
 				<img class="player__icon" src="Resources/icons/repeat.png">
 			</div>
 			<div id="player__cs__slider">
 				<span class="player__cs__slider__time">0:06</span>
-				<input class="player__slider-input" id="player__cs__slider__input" type="range">
+				<input class="player__slider-input" id="player__cs__slider__input" type="range" min="1" max="100" value="13">
 				<span class="player__cs__slider__time">3:33</span>
 			</div>
 		</div>
 
 		<!-- right section -->
-		<div>
+		<div id="player__rs">
 			<img class="player__icon" src="Resources/icons/queue.png">
 			<img class="player__icon" src="Resources/icons/device.png">
 			<img class="player__icon" src="Resources/icons/volume.png">
-			<input class="player__slider-input" id="player__rs__input" type="range">
+			<input class="player__slider-input" id="player__rs__input" type="range" min="1" max="100" value="100">
 		</div>
 	</div>
 </body>
