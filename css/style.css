@@ -17,7 +17,7 @@ body {
 }
 
 .player__icon {
-	height: 1.2rem;
+	height: 1.3rem;
 }
 
 #player {
@@ -52,4 +52,8 @@ body {
 
 #player__ls__songID__artist {
 	font-size: 0.8rem;
+}
+
+.leftnav__icon {
+	height: 1.2rem;
 }
