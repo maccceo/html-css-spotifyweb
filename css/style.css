@@ -4,9 +4,27 @@
 	box-sizing: border-box;
 }
 
+/*Installazione font locali*/
+@font-face {
+  font-family: 'Gotham-regular';
+   src: url('../Resources/fonts/Gotham-Book.ttf');  
+}
+@font-face {
+  font-family: 'Gotham-bold';
+   src: url('../Resources/fonts/Gotham-Bold.otf');  
+}
+@font-face {
+  font-family: 'Gotham-light';
+   src: url('../Resources/fonts/Gotham-Light.otf');  
+}
+@font-face {
+  font-family: 'Gotham-medium';
+   src: url('../Resources/fonts/Gotham-Medium.ttf');  
+}
+
 body {
 	color: darkgrey;
-	font-family: Gotham, Arial, sans-serif;
+	font-family: Gotham-medium, Arial, sans-serif;
 }
 
 #main-container {
@@ -38,51 +56,91 @@ body {
 /*-----------------------------*/
 /*# # # LEFTNAV CON MENU' # # #*/
 /*-----------------------------*/
+/*
+leftnav
+	leftnav__top-elements
+		leftnav__logo
+		leftnav__categories
+		leftnav__recentlyplayed
+	leftnav__bottom-elements
+		leftnav__install
+		leftnav__account
+*/
 #leftnav {
 	width: 250px;
 	height: 100%;
 	float: left;
 	background-color: #08080A;
-	padding: 15px;
+	font-size: 0.9rem;
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: space-between;
-
 }
 
-#leftnav__top-elements>* {
-	margin-bottom: 20px;
+.leftnav__icon {
+	height: 0.9rem;
+	margin: -2px 15px 0;
 }
 
-#leftnav__bottom-elements {
-
-}
-
+/*top-elements*/
 #leftnav__logo>img {
 	width: 70%;
+	padding: 19px;
 }
 
 .leftnav__category {
+	height: 28px;
 	margin-bottom: 10px;
 	font-weight: 600;
-	border-left: 5px solid #00D764;
+	display: flex;
+	align-items: center;
 }
 
 .leftnav__category p {
 	display: inline-block;
-	margin-left: 10px;
+}
+
+.leftnav__category:hover {
+	color: #FFF;
+}
+
+.leftnav__category:hover>.leftnav__icon {
+	filter: brightness(0%) invert(100%);
+}
+
+.leftnav__categories--active {
+	border-left: 4px solid #00D764;
+	color: #FFF;
+}
+
+.leftnav__categories--active>.leftnav__icon {
+	margin-left: 11px;
+	filter: brightness(0%) invert(100%);
 }
 
 #leftnav__recentlyplayed {
-
+	padding: 19px;
 }
 
-.leftnav__icon {
-	height: 1.2rem;
+.leftnav__recentlyplayed__item {
+	margin: 15px 0;
+}
 
+.leftnav__recentlyplayed__item__title {
+	overflow: auto;
+}
+
+.leftnav__recentlyplayed__item__category {
+	text-transform: uppercase;
+	font-family: Gotham-regular, Arial, sans-serif;
+	font-size: 0.8rem;
+	margin-top: 5px;
 }
 
 
+#leftnav__bottom-elements {
+	padding: 15px;
+}
 
 
 
