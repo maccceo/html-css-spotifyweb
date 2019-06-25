@@ -65,6 +65,13 @@ leftnav
 	leftnav__bottom-elements
 		leftnav__install
 		leftnav__account
+
+leftnav--mobile (normalmente invisibile)
+	leftnav__top-elements
+		leftnav__logo
+		leftnav__categories
+	leftnav__bottom-elements
+		leftnav__account
 */
 #leftnav {
 	width: 250px;
@@ -77,13 +84,24 @@ leftnav
 	justify-content: space-between;
 }
 
+#leftnav--mobile {
+	width: 60px;
+	height: 100%;
+	float: left;
+	background-color: #08080A;
+	font-size: 0.9rem;
+	display: none;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+}
+
 .leftnav__icon {
 	height: 0.9rem;
 	margin: -2px 15px 0;
 }
 
 /*top-elements*/
-#leftnav__logo>img {
+.leftnav__logo>img {
 	width: 70%;
 	padding: 19px;
 }
@@ -138,48 +156,113 @@ leftnav
 }
 
 /*bottom-elements*/
-#leftnav__bottom-elements {
+.leftnav__bottom-elements {
 	padding: 15px 24px;		/*è un po' più stretto del resto*/
 }
 
-#leftnav__bottom-elements p {
+.leftnav__bottom-elements p {
 	display: inline-block;
 }
 
-#leftnav__install,
-#leftnav__account {
+.leftnav__install,
+.leftnav__account {
 	display: flex;
 	align-items: center;
 	padding: 9px 0;
 }
 
-#leftnav__install {
+.leftnav__install {
 	border-bottom: 1px solid #444;
 }
 
-#leftnav__account {
+.leftnav__account {
 	font-family: Gotham-bold, Arial, sans-serif;;
 }
 
-#leftnav__install .leftnav__icon {
+.leftnav__install .leftnav__icon {
 	height: 20px;
 	margin: 0 11px 0 2px;
 }
 
-#leftnav__account .leftnav__icon {
+.leftnav__account .leftnav__icon {
 	height: 24px;
 	margin: 0 7px 0 2px;
 }
 
-#leftnav__install:hover p,
-#leftnav__account:hover p {
+.leftnav__install:hover p,
+.leftnav__account:hover p {
 	color: #FFF;
 }
 
-#leftnav__account:hover img,
-#leftnav__install:hover img {
+.leftnav__account:hover img,
+.leftnav__install:hover img {
 	filter: brightness(0%) invert(100%);
 }
+
+
+
+/*MEDIA QUERY*/
+@media screen and (max-height: 720px) {
+	#leftnav__recentlyplayed {
+		display: none;
+	}
+}
+
+@media screen and (max-height: 410px) {
+	#leftnav__bottom-elements {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	#leftnav {
+		display: none;
+	}
+
+	#leftnav--mobile {
+		display: flex;
+	}
+	.leftnav__top-elements {
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+	}
+	.leftnav__logo>img {
+	    width: 50%;
+	    padding: 0;
+	}
+
+	.leftnav__logo {
+		text-align: center;
+		margin: 20px 0;
+	}
+
+	.leftnav__bottom-elements {
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		margin-bottom: 10px;
+	}
+
+	.leftnav__icon {
+		height: 1.2rem;
+		margin: 0 0 4px 0;
+	}
+
+	.leftnav__categories--active {
+		border-left: 0;
+		border-bottom: 2px solid #00D764;
+		color: #FFF;
+		box-sizing: content-box;
+	}
+
+	.leftnav__categories--active>.leftnav__icon {
+		margin-left: 0;
+	}
+}
+
+
+
 
 
 /*------------------------*/
@@ -305,6 +388,17 @@ main
 
 
 
+/*MEDIA QUERY*/
+@media screen and (max-width: 992px) {
+	#main {
+		width: calc(100% - 60px);
+	}
+}
+
+
+
+
+
 /*---------------------------*/
 /*# # # PLAYER IN BASSO # # #*/
 /*---------------------------*/
@@ -330,7 +424,7 @@ player
 
 /* input[type="range"] */
 .player__slider-input {
-	-webkit-appearance: none;  /* cancella stile standard */
+	-webkit-appearance: none;
   	appearance: none;
   	outline: none;
   	background-color: darkgrey;
@@ -373,7 +467,6 @@ player
 	display: inline-block;
 }
 
-/*lo metto anche al div perchè sennò per qualche motivo viene 4px più grande*/
 #player__ls__albumcover,
 #player__ls__albumcover>img {
 	height: 55px;
@@ -449,4 +542,21 @@ player
 
 #player__rs__input {
 	width: 80px;
+}
+
+
+
+/*MEDIA QUERY*/
+@media screen and (max-width: 768px) {
+	#player__rs__input {
+		display: none;
+	}
+
+	#player__ls #player__ls__songID {
+		display: none;
+	}
+
+	#player__ls__albumcover {
+		margin-right: 10px;
+	}
 }
