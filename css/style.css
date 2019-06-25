@@ -203,6 +203,10 @@ leftnav
 	height: 1.1rem;
 }
 
+.player__icon:hover {
+	filter: brightness(0%) invert(100%);
+}
+
 /* input[type="range"] */
 .player__slider-input {
 	-webkit-appearance: none;  /* cancella stile standard */
@@ -289,6 +293,7 @@ leftnav
 	top: 1px;
 	left: 50%;
 	transform: translate(-52%,0%);
+	z-index: -1;
 }
 
 #player__cs__slider {
