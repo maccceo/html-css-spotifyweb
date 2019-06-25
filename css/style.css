@@ -284,17 +284,23 @@ main
 	width: 170px;
 }
 
+.thumb-circle {
+	border-radius: 50%;
+}
+
 .main__featured__container__element__title {
 	width: 170px;
 	color: #FFF;
 	font-size: 0.9rem;
 	margin: 10px 0 8px;
+	text-align: center;
 }
 
 .main__featured__container__element__other {
 	width: 170px;
 	font-size: 0.9rem;
 	line-height: 1.1rem;
+	text-align: center;
 }
 
 
