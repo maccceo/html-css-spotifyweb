@@ -188,15 +188,30 @@ leftnav
 /*
 main
 	main__categories
-	create per te
-	recently played
-	altri come
+		main__categories__element
+			main__categories__title
+			(main__categories__greenborder)
+		main__categories__element
+		main__categories__element
+		..
+	create per te (main__featured)
+		main__featured__header
+		main__featured__container
+			main__featured__container__element
+				main__featured__container__element__img
+				main__featured__container__element__title
+				main__featured__container__element__other
+		main__featured__container
+		main__featured__container
+		..
 */
 #main {
 	width: calc(100% - 250px);
 	height: 100%;
 	float: left;
 	overflow: auto;
+	padding: 0 30px;
+	font-size: 0.7rem;
 	background-image: -webkit-linear-gradient(bottom right, #040405, #16161a, #222129, #302d3a, #3e3a4b);
 	background-image: -o-linear-gradient(bottom right, #040405, #16161a, #222129, #302d3a, #3e3a4b);
 	background-image: linear-gradient(to top left, #040405, #16161a, #222129, #302d3a, #3e3a4b);
@@ -220,16 +235,12 @@ main
 	height: 40px;
 }
 
-.main__categories__title {
-	font-size: 0.7rem;
-}
-
 .main__categories__element:first-child>p,
 .main__categories__element:hover {
 	color: #FFF;
 }
 
-.main__catyegories__greenborder {
+.main__categories__greenborder {
 	display: inline-block;
 	height: 2px;
 	width: 30px;
@@ -238,6 +249,52 @@ main
 }
 
 
+
+.main__featured__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.main__featured__header__title {
+	color: #FFF;
+	font-size: 2rem;
+}
+
+.main__featured__header__showmo {
+	text-transform: uppercase;
+}
+
+.main__featured__container {
+	margin-bottom: 40px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+}
+
+.main__featured__container__element {
+	width: 170px;
+	margin: 10px;
+	flex: 1 0 auto;
+}
+
+.main__featured__container__element__img {
+	height: 170px;
+	width: 170px;
+}
+
+.main__featured__container__element__title {
+	width: 170px;
+	color: #FFF;
+	font-size: 0.9rem;
+	margin: 10px 0;
+}
+
+.main__featured__container__element__other {
+	width: 170px;
+	font-size: 0.9rem;
+}
 
 
 
