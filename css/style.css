@@ -126,8 +126,8 @@ leftnav
 	margin: 15px 0;
 }
 
-.leftnav__recentlyplayed__item__title {
-	overflow: auto;
+.leftnav__recentlyplayed__item__title:hover {
+	color: #DDD;
 }
 
 .leftnav__recentlyplayed__item__category {
@@ -137,11 +137,49 @@ leftnav
 	margin-top: 5px;
 }
 
-
+/*bottom-elements*/
 #leftnav__bottom-elements {
-	padding: 15px;
+	padding: 15px 24px;		/*è un po' più stretto del resto*/
 }
 
+#leftnav__bottom-elements p {
+	display: inline-block;
+}
+
+#leftnav__install,
+#leftnav__account {
+	display: flex;
+	align-items: center;
+	padding: 9px 0;
+}
+
+#leftnav__install {
+	border-bottom: 1px solid #444;
+}
+
+#leftnav__account {
+	font-family: Gotham-bold, Arial, sans-serif;;
+}
+
+#leftnav__install .leftnav__icon {
+	height: 20px;
+	margin: 0 11px 0 2px;
+}
+
+#leftnav__account .leftnav__icon {
+	height: 24px;
+	margin: 0 7px 0 2px;
+}
+
+#leftnav__install:hover p,
+#leftnav__account:hover p {
+	color: #FFF;
+}
+
+#leftnav__account:hover img,
+#leftnav__install:hover img {
+	filter: brightness(0%) invert(100%);
+}
 
 
 /*------------------------*/
@@ -281,4 +319,8 @@ leftnav
 
 #player__rs .player__icon {
 	margin: 0 5px;
+}
+
+#player__rs__input {
+	width: 80px;
 }
