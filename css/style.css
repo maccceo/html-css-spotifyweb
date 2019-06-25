@@ -185,11 +185,56 @@ leftnav
 /*------------------------*/
 /*# # # MAIN SECTION # # #*/
 /*------------------------*/
+/*
+main
+	main__categories
+	create per te
+	recently played
+	altri come
+*/
 #main {
 	width: calc(100% - 250px);
 	height: 100%;
 	float: left;
 	overflow: auto;
+	background-image: -webkit-linear-gradient(bottom right, #040405, #16161a, #222129, #302d3a, #3e3a4b);
+	background-image: -o-linear-gradient(bottom right, #040405, #16161a, #222129, #302d3a, #3e3a4b);
+	background-image: linear-gradient(to top left, #040405, #16161a, #222129, #302d3a, #3e3a4b);
+}
+
+#main__categories {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	text-transform: uppercase;
+	color: darkgrey;
+	margin: 40px;
+}
+
+.main__categories__element {
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+	padding: 0 25px;
+	height: 40px;
+}
+
+.main__categories__title {
+	font-size: 0.7rem;
+}
+
+.main__categories__element:first-child>p,
+.main__categories__element:hover {
+	color: #FFF;
+}
+
+.main__catyegories__greenborder {
+	display: inline-block;
+	height: 2px;
+	width: 30px;
+	background-color: #00D764;
+	margin-top: 4px;
 }
 
 
@@ -199,6 +244,18 @@ leftnav
 /*---------------------------*/
 /*# # # PLAYER IN BASSO # # #*/
 /*---------------------------*/
+/*
+player
+	player_ls
+		player__ls__albumcover
+		player__ls__songID
+		player__ls__icons
+	player_cs
+		player__cs__buttons
+		player__cs__slider
+	player_rs
+		icons + input range
+*/
 .player__icon {
 	height: 1.1rem;
 }
